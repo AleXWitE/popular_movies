@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Popular movies',
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
+        accentColor: Colors.black,
+        primarySwatch: Colors.blueGrey,
+        backgroundColor: Colors.grey[600],
       ),
       initialRoute: '/home',
       routes: {

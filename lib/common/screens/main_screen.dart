@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:popular_movies/common/data_models/data_models.dart';
 
@@ -12,15 +11,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
-
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/settings'),
+            child: Icon(Icons.settings, size: 30.0,),
+          )
         ],
       ),
       body: GridView.builder(
@@ -33,7 +33,6 @@ class _MainScreenState extends State<MainScreen> {
         itemBuilder: (BuildContext context, int index) {
           return Container();
         },
-
       ),
     );
   }
